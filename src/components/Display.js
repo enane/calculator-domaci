@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { View, SafeAreaView, Text, StyleSheet } from 'react-native'
+import { Button } from 'react-native-web';
 import colors from '../utils/colors';
 
 const Display = ({ state }) => (
@@ -23,7 +24,7 @@ const Display = ({ state }) => (
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.black,
+    backgroundColor: colors['black'],
     flex: 1.3,
     justifyContent: 'space-around',
     paddingHorizontal: 24,

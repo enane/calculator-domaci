@@ -7,6 +7,8 @@ import colors from './src/utils/colors';
 
 export default class App extends Component {
 
+  history = []
+
   state = {
     display: '',
     result: ''
@@ -20,8 +22,15 @@ export default class App extends Component {
       })
     }
     else if(operation === '=') {
+      this.history.push(this.state.display + ' = ' + this.state.result)
       this.setState({
         display: this.state.result,
+        result: ''
+      })
+    }
+    else if(operation === 'History') {
+      this.setState({
+        display: '',
         result: ''
       })
     }
@@ -29,7 +38,6 @@ export default class App extends Component {
       const display = this.state.display + operation
       let result = this.state.result
       try {
-
         let fixedOperation = display.split('×').join('*')
         fixedOperation = fixedOperation.split('÷').join('/')
         fixedOperation = fixedOperation.split(',').join('.')
@@ -60,6 +68,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'stretch',
-    backgroundColor: colors['grey-light'],
+    backgroundColor: colors['grey-darker'],
   },
 });

@@ -16,6 +16,7 @@ class Buttons extends Component {
       ['4', '5', '6'],
       ['1', '2', '3'],
       [',', '0', '='],
+      ['History']
     ]
     const operations = ['C', '÷', '×', '-', '+']
     return (
@@ -53,7 +54,7 @@ const styles = StyleSheet.create({
   },
   operations: {
     flex: 1,
-    backgroundColor: colors["white"]
+    backgroundColor: colors["grey-darkest"]
   }
 })
 

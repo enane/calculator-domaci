@@ -29,11 +29,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    borderWidth: 15,
-    borderColor: colors['black']
   },
   text: {
-    color: colors.black,
+    color: colors.white,
     fontSize: 28
   }
 })
