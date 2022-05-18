@@ -3,20 +3,40 @@ import { View, SafeAreaView, Text, StyleSheet } from 'react-native'
 import { Button } from 'react-native-web';
 import colors from '../utils/colors';
 
-const Display = ({ state }) => (
+// const Display = ({ state }) => (
+//   <View style={styles.container}>
+//     <SafeAreaView style={styles.safe}>
+//       <Text
+//         style={styles.display}
+//         adjustsFontSizeToFit
+//         numberOfLines={1}
+//       >{state.display}</Text>
+//       { state.result !== '' &&
+//         <Text
+//           style={styles.result}
+//           adjustsFontSizeToFit
+//           numberOfLines={1}
+//         >{state.result}</Text>
+//       }
+//     </SafeAreaView>
+//   </View>
+// )
+
+
+const Display = ({ display, result }) => (
   <View style={styles.container}>
     <SafeAreaView style={styles.safe}>
       <Text
         style={styles.display}
         adjustsFontSizeToFit
         numberOfLines={1}
-      >{state.display}</Text>
-      { state.result !== '' &&
+      >{display}</Text>
+      { result !== '' &&
         <Text
           style={styles.result}
           adjustsFontSizeToFit
           numberOfLines={1}
-        >{state.result}</Text>
+        >{result}</Text>
       }
     </SafeAreaView>
   </View>
